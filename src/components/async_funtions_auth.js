@@ -33,3 +33,19 @@ export async function findCompanyNit(nit) {
         }
     }
 }
+
+export async function createCompany(company) {
+    const response = await fetch("http://localhost:3000/companies", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(company)
+    })
+    const data = await response.json()
+    return {
+        ok: response.ok,
+        data: data,
+        statusText: response.statusText
+    }
+}
