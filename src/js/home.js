@@ -72,8 +72,6 @@ async function renderJobs() {
 }
 
 async function getJobsByCharacters(words, modality) {
-  console.log("words", words);
-  console.log("modality", modality);
   const jobs = await getJobs()
   containerJobs.innerHTML = ""
   jobs.data.forEach(element => {
@@ -141,7 +139,7 @@ async function getJobsByCharacters(words, modality) {
               </div>
               <div class="d-flex gap-2 align-items-center fs-5 text-muted">
                 <i class="bi bi-geo-alt-fill"></i>
-                <span class="fw-semibold">${element.location}</span>
+                <span class="fw-semibold">${element.location} , ${element.modality}</span>
               </div>
     
               <div class="d-flex gap-2 align-items-center fs-5 text-muted">
