@@ -11,6 +11,8 @@ const salary = document.getElementById("salary")
 const location = document.getElementById("location")
 const modality = document.getElementById("modality")
 const description = document.getElementById("description")
+const btnLogout=document.getElementById("btn-logout")
+let session=JSON.parse(localStorage.getItem("userOnline"))
 let idCache
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +29,7 @@ formJobs.addEventListener("submit", async (event) => {
         location: location.value,
         modality: modality.value,
         description: description.value,
-        companyId: "2034",
+        companyId: session.id,
     }
     if (idCache === undefined) {
         const jobCreated = await createJob(job)
@@ -73,8 +75,14 @@ tbodyJobs.addEventListener("click", async (event) => {
     }
 })
 
+btnLogout.addEventListener("click",() => {
+  localStorage.setItem("userOnline","")
+  localStorage.setItem("isAutorizated",JSON.stringify(false))
+  window.location.href="/"
+})
+
 async function renderJobs() {
-    const jobs = await getJobsByCompany("2034")
+    const jobs = await getJobsByCompany(session.id)
     tbodyJobs.innerHTML = ""
     jobs.data.forEach(element => {
         tbodyJobs.innerHTML += `

@@ -28,6 +28,17 @@
       "modality": "Remote",
       "description": "vsvs",
       "companyId": "2034"
+    },
+    {
+      "id": "6e1c",
+      "title": "desarrollador web",
+      "experience": "5",
+      "publicationDate": 1707750798666,
+      "salary": "60000",
+      "location": "Medellin",
+      "modality": "In person",
+      "description": "se necesita un desarrollador web",
+      "companyId": "2035"
     }
   ]
 }
