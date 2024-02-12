@@ -11,6 +11,16 @@ const nit = document.getElementById("nit")
 const imgCompany = document.getElementById("img-company")
 
 const checkPasswords = () => {
+    if (password.value.length < 6) {
+        password.classList.add("is-invalid")
+        return false
+    }
+
+    if (passwordConfirmation.value.length < 6) {
+        passwordConfirmation.classList.add("is-invalid")
+        return false
+    }
+
     if (password.value === passwordConfirmation.value) {
         return true
     } else {
@@ -50,7 +60,7 @@ formRegister.addEventListener("submit", async (event) => {
             }
 
         } else {
-            alert("passwords no coinciden")
+            alert("valida las contraseñas")
             password.classList.add("is-invalid")
             passwordConfirmation.classList.add("is-invalid")
         }
