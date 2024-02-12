@@ -16,3 +16,20 @@ export async function getJobs() {
         }
     }
 }
+
+export async function getJobsByCompany(idCompany) {
+    const response = await fetch(`${URL}/jobs?companyId=${idCompany}&_embed=company`)
+    if (response.ok) {
+        const data = await response.json()
+        return {
+            ok: response.ok,
+            data: data,
+            statusText: response.statusText
+        }
+    } else {
+        return {
+            ok: response.ok,
+            statusText: response.statusText
+        }
+    }
+}
