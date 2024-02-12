@@ -16,3 +16,20 @@ export async function findCompany(email) {
         }
     }
 }
+
+export async function findCompanyNit(nit) {
+    const response = await fetch(`${URL}/companies?nit=${nit.value}`)
+    if (response.ok) {
+        const data = await response.json()
+        return {
+            ok: response.ok,
+            data: data,
+            statusText: response.statusText
+        }
+    } else {
+        return {
+            ok: response.ok,
+            statusText: response.statusText
+        }
+    }
+}

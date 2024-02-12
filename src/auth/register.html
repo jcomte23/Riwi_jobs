@@ -11,9 +11,9 @@
 <body class="bg-gradient-primary">
     <div class="container d-middle vh-100">
         <!-- Outer Row -->
-        <form action="index.html" class="bg-white rounded row overflow-hidden w-75">
+        <form class="bg-white rounded row overflow-hidden w-75" id="form-register">
             <div class="col-6 p-0 d-none d-lg-block">
-                <img src="img/register.jpg" alt="Login banner" class="object-fit-cover w-100 h-100" />
+                <img src="../../img/register.jpg" alt="Login banner" class="object-fit-cover w-100 h-100" />
             </div>
             <div class="col-12 col-lg-6 p-5">
                 <h2 class="text-center">Sign up!</h2>
@@ -36,11 +36,16 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="nit" class="form-label">Nit company</label>
+                    <input type="text" class="form-control" id="nit" required />
+                </div>
+
+                <div class="mb-3">
                     <label for="img-company" class="form-label">Image company</label>
                     <input type="text" class="form-control" id="img-company" />
                 </div>
                 <div class="mb-3">
-                    <a href="index.html">Do you already have an account? Log in</a>
+                    <a href="./login.html">Do you already have an account? Log in</a>
                 </div>
 
                 <button type="submit" class="btn btn-primary w-100">

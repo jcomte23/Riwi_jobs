@@ -14,7 +14,7 @@
       "password": "google",
       "nameCompany": "Google",
       "imageCompany": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
-      "nit": "90212132"
+      "nit": "90212133"
     }
   ],
   "jobs": [
@@ -27,7 +27,7 @@
       "experience": "experience",
       "modality": "modality",
       "salary": "salary",
-      "companyId":"2034"
+      "companyId": "2034"
     }
   ]
 }
