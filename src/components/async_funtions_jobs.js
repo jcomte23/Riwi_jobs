@@ -33,3 +33,17 @@ export async function getJobsByCompany(idCompany) {
         }
     }
 }
+
+export async function createJob(job) {
+    const response = await fetch(`${URL}/jobs`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(job)
+    })
+    return {
+        ok: response.ok,
+        statusText: response.statusText
+    }
+}

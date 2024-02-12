@@ -54,7 +54,7 @@
                 +++++++++++++++++++++++++++ -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <form class="modal-dialog modal-dialog-centered">
+                            <form class="modal-dialog modal-dialog-centered" id="form-jobs">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h1 class="modal-title fs-5 text-gradient-primary" id="staticBackdropLabel">
@@ -88,9 +88,9 @@
                                                 </div>
 
                                                 <div class="mb-3 col-6">
-                                                    <label for="Location" class="form-label">Location</label>
-                                                    <input type="text" class="form-control w-100" id="Location"
-                                                        placeholder="Location" required />
+                                                    <label for="location" class="form-label">Location</label>
+                                                    <input type="text" class="form-control w-100" id="location"
+                                                        placeholder="location" required />
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -116,7 +116,7 @@
                                         </section>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        <button type="button" class="btn btn-secondary" id="btn-close-form-jobs" data-bs-dismiss="modal">
                                             Close
                                         </button>
                                         <button type="submit" class="btn btn-primary">

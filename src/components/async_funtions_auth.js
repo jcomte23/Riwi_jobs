@@ -35,7 +35,7 @@ export async function findCompanyNit(nit) {
 }
 
 export async function createCompany(company) {
-    const response = await fetch("http://localhost:3000/companies", {
+    const response = await fetch(`${URL}/companies`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
