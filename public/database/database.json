@@ -25,39 +25,5 @@
       "imgCompany": "asvsav"
     }
   ],
-  "jobs": [
-    {
-      "title": "desarrollador web ",
-      "experience": "2",
-      "publicationDate": 1707752862213,
-      "salary": "3000",
-      "location": "N/A",
-      "modality": "",
-      "description": "se necesita un desarrollador web con exelente fundamentos en react y figma",
-      "companyId": "2035",
-      "id": "6e1c"
-    },
-    {
-      "title": "desarrollador web ",
-      "experience": "2",
-      "publicationDate": 1707752862213,
-      "salary": "3000",
-      "location": "N/A",
-      "modality": "",
-      "description": "se necesita un desarrollador web con exelente fundamentos en react y figma",
-      "companyId": "2035",
-      "id": "6e1c"
-    },
-    {
-      "title": "desarrollador web ",
-      "experience": "2",
-      "publicationDate": 1707752862213,
-      "salary": "3000",
-      "location": "N/A",
-      "modality": "",
-      "description": "se necesita un desarrollador web con exelente fundamentos en react y figma",
-      "companyId": "2035",
-      "id": "6e1c"
-    }
-  ]
+  "jobs": []
 }
