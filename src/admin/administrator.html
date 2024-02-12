@@ -44,15 +44,11 @@
 
                 <section class="row d-flex align-items-center">
                     <div class="col-12 d-flex justify-content-end">
-                        <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop">
                             New vacancy
                         </button>
 
-                        <!-- +++++++++++++++++++++++++++
-                 MODAL NEW OR  UPDATE JOB
-                +++++++++++++++++++++++++++ -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <form class="modal-dialog modal-dialog-centered" id="form-jobs">
@@ -126,22 +122,22 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <table class="table table-bordered" width="100%" cellspacing="0" role="grid" >
+                    <div class="col-12 table-responsive">
+                        <table class="table table-bordered table-striped table-hover align-middle" width="100%" cellspacing="0" role="grid" >
                             <thead>
                                 <tr role="row">
                                     <th>Image</th>
                                     <th>Company</th>
                                     <th>Description</th>
                                     <th>Location</th>
-                                    <th>Required experience</th>
+                                    <th>Experience in years</th>
                                     <th>Modality</th>
-                                    <th>Salary</th>
+                                    <th>Salary in dolars</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
 
-                            <tbody id="tbody-jobs">
+                            <tbody id="tbody-jobs" class="table-group-divider">
                                 <tr>
                                     <td>
                                         <div class="d-middle">
