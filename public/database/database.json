@@ -24,7 +24,8 @@
       "location": "location",
       "experience": "experience",
       "modality": "modality",
-      "salary": "salary"
+      "salary": "salary",
+      "companyId":"2034"
     }
   ]
 }

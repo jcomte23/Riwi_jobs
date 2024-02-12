@@ -34,7 +34,7 @@ async function renderJobs() {
           </div>
   
           <div class="col-6 d-flex justify-content-end">
-            <img src="img/logo.webp" alt="logo" height="80" width="80"
+            <img src="${element.company.imageCompany}" alt="logo" height="80" width="80"
               class="object-fit-contain rounded-circle img-company" />
           </div>
         </div>

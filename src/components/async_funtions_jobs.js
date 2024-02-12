@@ -1,7 +1,7 @@
 const URL = "http://localhost:3000"
 
 export async function getJobs() {
-    const response = await fetch(`${URL}/jobs`)
+    const response = await fetch(`${URL}/jobs?_embed=company`)
     if (response.ok) {
         const data = await response.json()
         return {
