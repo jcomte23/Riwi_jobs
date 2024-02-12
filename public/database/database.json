@@ -3,6 +3,7 @@
     {
       "id": "2034",
       "email": "admin@riwi.io",
+      "password": "riwi",
       "nameCompany": "Riwi",
       "imageCompany": "https://riwi.io/wp-content/uploads/2023/07/Fondo-claro-logo.png",
       "nit": "90212132"
@@ -10,6 +11,7 @@
     {
       "id": "2035",
       "email": "admin@google.com",
+      "password": "google",
       "nameCompany": "Google",
       "imageCompany": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
       "nit": "90212132"
