@@ -28,8 +28,8 @@
   "jobs": [
     {
       "title": "Trainer Python",
-      "experience": "1",
-      "publicationDate": "2/12/2024, 11:52:21 AM",
+      "experience": "2",
+      "publicationDate": "2/12/2024, 1:01:31 PM",
       "salary": "1000",
       "location": "Medellin",
       "modality": "In person",
@@ -38,15 +38,26 @@
       "id": "8c7c"
     },
     {
-      "id": "3800",
       "title": "Trainer JavaScript",
-      "experience": "1",
-      "publicationDate": "2/12/2024, 11:53:38 AM",
+      "experience": "2",
+      "publicationDate": "2/12/2024, 1:01:36 PM",
       "salary": "1000",
       "location": "Medellin",
       "modality": "In person",
       "description": "Se solicita trainer con capacidad de enseñar el lenguaje de programacion javascript desde lo mas basico hasta nivel avanzado",
-      "companyId": "2034"
+      "companyId": "2034",
+      "id": "3800"
+    },
+    {
+      "id": "cf4a",
+      "title": "Analista de Datos",
+      "experience": "5",
+      "publicationDate": "2/12/2024, 12:54:00 PM",
+      "salary": "10000",
+      "location": "N/A",
+      "modality": "Remote",
+      "description": "Se solicita un analista de datos con buena experiencia y gran capacidad",
+      "companyId": "2035"
     }
   ]
 }
