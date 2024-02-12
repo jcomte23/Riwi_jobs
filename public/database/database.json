@@ -15,5 +15,16 @@
       "nit": "90212132"
     }
   ],
-  "jobs": []
+  "jobs": [
+    {
+      "id": "1",
+      "title": "example",
+      "description": "description",
+      "publicationDate": "publicationDate",
+      "location": "location",
+      "experience": "experience",
+      "modality": "modality",
+      "salary": "salary"
+    }
+  ]
 }
