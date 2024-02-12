@@ -1,6 +1,7 @@
 import { findCompany } from '../components/async_funtions_auth'
 import '../scss/style.scss'
 import * as bootstrap from 'bootstrap'
+import { smallAlertError } from './alerts'
 
 const formLogin = document.getElementById("form-login")
 const email = document.getElementById("email")
@@ -16,12 +17,13 @@ formLogin.addEventListener("submit", async (event) => {
             window.location.href="../admin/administrator.html"
         } else {
             email.classList.add("is-valid")
+            email.classList.remove("is-invalid")
             password.classList.add("is-invalid")
-            alert("password incorrecta")
+            smallAlertError("contraseña incorrecta")
         }
     } else {
         email.classList.add("is-invalid")
-        alert("esta compañia no esta registrada")
+        smallAlertError("El correo no fue encontrado")
     }
 })
 
