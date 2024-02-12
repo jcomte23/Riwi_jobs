@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="container-fluid">
+    <main class="row vh-100 p-3">
+        <section class="col-2 bg-gradient-primary rounded-5">
+            <div class="d-flex flex-column">
+                <h1 class="text-center my-2 text-white-50">Riwi SAS</h1>
+                <div class="w-100 d-middle">
+                    <img src="img/avatar.jpg" alt="Avatar" height="100"
+                        class="rounded-circle border-light border-3" />
+                </div>
+
+                <nav class="d-flex flex-column my-2">
+                    <div class="d-flex gap-2 p-3 align-items-center item-nav">
+                        <i class="bx bx-store-alt text-white-50 fs-4"></i>
+                        <a href="administrator.html" class="text-white-50 fs-5">Jobs</a>
+                    </div>
+
+                    <div class="d-flex gap-2 p-3 align-items-center item-nav">
+                        <i class="bx bx-home text-white-50 fs-4"></i>
+                        <a href="home.html" class="text-white-50 fs-5">Home</a>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2 p-3 item-nav">
+                        <i class="bx bx-log-out text-white-50 fs-4"></i>
+                        <a href="index.html" class="text-white-50 fs-5">Log Out</a>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <div class="col-10">
+            <div class="rounded-5 bg-white content p-4">
+                <h1 class="text-gradient-primary mb-4 bg-white p-3">Jobs</h1>
+
+                <section class="row d-flex align-items-center">
+                    <div class="col-12 d-flex justify-content-end">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            New vacancy
+                        </button>
+
+                        <!-- +++++++++++++++++++++++++++
+                 MODAL NEW OR  UPDATE JOB
+                +++++++++++++++++++++++++++ -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <form class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 text-gradient-primary" id="staticBackdropLabel">
+                                            New vacancy
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <section class="w-100">
+                                            <div class="d-flex justify-content-between w-100">
+                                                <!-- INPUT ID PRODUCT -->
+                                                <input type="hidden" id="idJobUpdate" />
+                                                <div class="mb-3">
+                                                    <label for="title-job" class="form-label">Title</label>
+                                                    <input type="text" class="form-control" id="title-job"
+                                                        placeholder="Title Job" />
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="experience" class="form-label">Experience</label>
+                                                    <input type="number" class="form-control" id="experience"
+                                                        placeholder="experience" required />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="mb-3 col-6">
+                                                    <label for="salary" class="form-label">Salary</label>
+                                                    <input type="number" class="form-control w-100" id="salary"
+                                                        placeholder="Salary" required />
+                                                </div>
+
+                                                <div class="mb-3 col-6">
+                                                    <label for="Location" class="form-label">Location</label>
+                                                    <input type="text" class="form-control w-100" id="Location"
+                                                        placeholder="Location" required />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="mb-3 col-12">
+                                                    <label for="modality" class="form-label">
+                                                        Modality</label>
+                                                    <select class="form-select w-100" aria-label="Select Modality"
+                                                        id="modality">
+                                                        <option selected value="">
+                                                            Selected one Modality
+                                                        </option>
+                                                        <option value="Remote">Remote</option>
+                                                        <option value="In person">In person</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="mb-3 col-12">
+                                                    <label for="description" class="form-label">Description</label>
+                                                    <textarea class="form-control" id="description" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                            Close
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">
+                                            Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <table class="table table-bordered" width="100%" cellspacing="0" role="grid">
+                            <thead>
+                                <tr role="row">
+                                    <th>Image</th>
+                                    <th>Company</th>
+                                    <th>Description</th>
+                                    <th>Location</th>
+                                    <th>Required experience</th>
+                                    <th>Modality</th>
+                                    <th>Salary</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-middle">
+                                            <img src="img/logo.webp" alt="img-product" width="60" height="60"
+                                                class="img-fluid rounded-circle img-company" />
+                                        </div>
+                                    </td>
+                                    <td>Riwi</td>
+                                    <td>Chief Executive Officer (CEO)</td>
+                                    <td>London</td>
+                                    <td>47</td>
+                                    <td>In person</td>
+                                    <td>$1,200,000</td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+
+                                        <button class="btn btn-danger">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-middle">
+                                            <img src="img/logo.webp" alt="img-product" width="50" height="50"
+                                                class="img-fluid rounded-circle img-company" img-company />
+                                        </div>
+                                    </td>
+                                    <td>Riwi</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                    <td>In person</td>
+                                    <td>$86,000</td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+
+                                        <button class="btn btn-danger">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-middle">
+                                            <img src="img/logo.webp" alt="img-product" width="50" height="50"
+                                                class="img-fluid rounded-circle img-company" />
+                                        </div>
+                                    </td>
+                                    <td class="sorting_1">Riwi</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>Remote</td>
+                                    <td>$1,320,000</td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+
+                                        <button class="btn btn-danger">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-middle">
+                                            <img src="img/logo.webp" alt="img-product" width="50" height="50"
+                                                class="img-fluid rounded-circle img-company" img-company />
+                                        </div>
+                                    </td>
+                                    <td class="sorting_1">Riwi</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>Remote</td>
+                                    <td>$1,320,000</td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+
+                                        <button class="btn btn-danger">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-middle">
+                                            <img src="img/logo.webp" alt="img-product" width="50" height="50"
+                                                class="img-fluid rounded-circle img-company" img-company />
+                                        </div>
+                                    </td>
+                                    <td class="sorting_1">Riwi</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>Remote</td>
+                                    <td>$1,320,000</td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+
+                                        <button class="btn btn-danger">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-middle">
+                                            <img src="img/logo.webp" alt="img-product" width="50" height="50"
+                                                class="img-fluid rounded-circle img-company" img-company />
+                                        </div>
+                                    </td>
+                                    <td class="sorting_1">Riwi</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>Remote</td>
+                                    <td>$1,320,000</td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+
+                                        <button class="btn btn-danger">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-middle">
+                                            <img src="img/logo.webp" alt="img-product" width="50" height="50"
+                                                class="img-fluid rounded-circle img-company" img-company />
+                                        </div>
+                                    </td>
+                                    <td class="sorting_1">Riwi</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>Remote</td>
+                                    <td>$1,320,000</td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+
+                                        <button class="btn btn-danger">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-middle">
+                                            <img src="img/logo.webp" alt="img-product" width="50" height="50"
+                                                class="img-fluid rounded-circle img-company" img-company />
+                                        </div>
+                                    </td>
+                                    <td class="sorting_1">Riwi</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>Remote</td>
+                                    <td>$1,320,000</td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+
+                                        <button class="btn btn-danger">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="d-middle">
+                                            <img src="img/logo.webp" alt="img-product" width="50" height="50"
+                                                class="img-fluid rounded-circle img-company" img-company />
+                                        </div>
+                                    </td>
+                                    <td class="sorting_1">Riwi</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>Remote</td>
+                                    <td>$1,320,000</td>
+                                    <td>
+                                        <button class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </button>
+
+                                        <button class="btn btn-danger">
+                                            <i class="bx bx-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>

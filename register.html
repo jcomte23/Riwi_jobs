@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+
+<body class="bg-gradient-primary">
+    <div class="container d-middle vh-100">
+        <!-- Outer Row -->
+        <form action="index.html" class="bg-white rounded row overflow-hidden w-75">
+            <div class="col-6 p-0 d-none d-lg-block">
+                <img src="img/register.jpg" alt="Login banner" class="object-fit-cover w-100 h-100" />
+            </div>
+            <div class="col-12 col-lg-6 p-5">
+                <h2 class="text-center">Sign up!</h2>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required />
+                </div>
+                <div class="mb-3">
+                    <label for="password-confirmation" class="form-label">Password Confirmation</label>
+                    <input type="password" class="form-control" id="password-confirmation" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="company" class="form-label">Name company</label>
+                    <input type="text" class="form-control" id="company" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="img-company" class="form-label">Image company</label>
+                    <input type="text" class="form-control" id="img-company" />
+                </div>
+                <div class="mb-3">
+                    <a href="index.html">Do you already have an account? Log in</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    Create account
+                </button>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>

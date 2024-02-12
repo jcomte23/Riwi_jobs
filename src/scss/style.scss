@@ -1,2 +1,125 @@
 @import "bootstrap/scss/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+    --primary-color: #4e73df;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: #f8f9fc;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .bg-gradient-primary {
+    background-color: var(--primary-color);
+    background-image: linear-gradient(
+      180deg,
+      var(--primary-color) 10%,
+      #224abe 100%
+    );
+    background-size: cover;
+  }
+  
+  .text-gradient-primary {
+    color: var(--primary-color);
+  }
+  
+  .d-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item-nav {
+    transition: 0.3s all;
+  }
+  
+  .item-nav:hover a,
+  .item-nav:hover i {
+    color: #fff !important;
+  }
+  
+  .content {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+    height: 96vh;
+    overflow-y: auto;
+  }
+  
+  /* TABLE STYLES */
+  table th,
+  table td {
+    color: #858796 !important;
+    padding-top: 100px;
+  }
+  
+  .table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 0;
+  }
+  
+  .table-bordered td,
+  .table-bordered th {
+    border: 1px solid #e3e6f0;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #e3e6f0;
+  }
+  
+  .btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--primary-color);
+  }
+  
+  .img-company {
+    padding: 10px 0;
+    background: var(--bs-btn-color);
+  
+    border: 4px solid var(--primary-color);
+  }
+  
+  .card-job {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.3s all;
+    user-select: none;
+  }
+  
+  .card-job:hover {
+    transform: scale(1.04);
+  }
+  
+  .card-job h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  header {
+    background: var(--primary-color);
+  }
+  
+  header .nav-link {
+    --bs-nav-link-color: #fff;
+  }
+  
+  header .active {
+    --bs-navbar-active-color: #fff;
+    font-weight: bold;
+  }

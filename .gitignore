@@ -1,3 +1,9 @@
+#personalization
+/public/**/*.jpg
+/public/**/*.jpeg
+/public/**/*.png
+/public/**/*.git
+
 # Logs
 logs
 *.log
