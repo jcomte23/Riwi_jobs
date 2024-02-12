@@ -25,5 +25,28 @@
       "imgCompany": "asvsav"
     }
   ],
-  "jobs": []
+  "jobs": [
+    {
+      "title": "Trainer Python",
+      "experience": "1",
+      "publicationDate": "2/12/2024, 11:52:21 AM",
+      "salary": "1000",
+      "location": "Medellin",
+      "modality": "In person",
+      "description": "Se solicita trainer con capacidad de enseñar el lenguaje de programacion python desde lo mas basico hasta nivel avanzado",
+      "companyId": "2034",
+      "id": "8c7c"
+    },
+    {
+      "id": "3800",
+      "title": "Trainer JavaScript",
+      "experience": "1",
+      "publicationDate": "2/12/2024, 11:53:38 AM",
+      "salary": "1000",
+      "location": "Medellin",
+      "modality": "In person",
+      "description": "Se solicita trainer con capacidad de enseñar el lenguaje de programacion javascript desde lo mas basico hasta nivel avanzado",
+      "companyId": "2034"
+    }
+  ]
 }
