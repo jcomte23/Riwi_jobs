@@ -47,3 +47,16 @@ export async function createJob(job) {
         statusText: response.statusText
     }
 }
+
+export async function deleteJob(idJob) {
+    const response = await fetch(`${URL}/jobs/${idJob}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    return {
+        ok: response.ok,
+        statusText: response.statusText
+    }
+}

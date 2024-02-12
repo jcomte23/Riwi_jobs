@@ -1,10 +1,10 @@
-import { createJob, getJobsByCompany } from '../components/async_funtions_jobs'
+import { createJob, deleteJob, getJobsByCompany } from '../components/async_funtions_jobs'
 import '../scss/style.scss'
 import * as bootstrap from 'bootstrap'
 
 const tbodyJobs = document.getElementById("tbody-jobs")
 const formJobs = document.getElementById("form-jobs")
-const btnCloseFormJobs=document.getElementById("btn-close-form-jobs")
+const btnCloseFormJobs = document.getElementById("btn-close-form-jobs")
 const titleJob = document.getElementById("title-job")
 const experience = document.getElementById("experience")
 const salary = document.getElementById("salary")
@@ -37,6 +37,17 @@ formJobs.addEventListener("submit", async (event) => {
     }
 })
 
+tbodyJobs.addEventListener("click", async (event) => {
+    
+    if (event.target.classList.contains("delete-job")) {
+        const id = event.target.getAttribute("data-id")
+        const jobDeleted = await deleteJob(id)
+        if (jobDeleted.ok) {
+            renderJobs()
+        }
+    }
+})
+
 async function renderJobs() {
     const jobs = await getJobsByCompany("2034")
     tbodyJobs.innerHTML = ""
@@ -57,14 +68,16 @@ async function renderJobs() {
             <td>${element.salary}</td>
             <td>
                 <button class="btn btn-primary edit" data-id="${element.id}">
-                    <i class="bx bx-edit">Edit</i>
+                    <i class="bi bi-pencil-square"></i>Edit
                 </button>
 
-                <button class="btn btn-danger delete" data-id="${element.id}">
-                    <i class="bx bx-trash">Delete</i>
+                <button class="btn btn-danger delete-job" data-id="${element.id}">
+                    <i class="bi bi-trash-fill"></i>Delete
                 </button>
             </td>
         </tr>
         `
     })
 }
+
+
