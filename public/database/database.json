@@ -15,6 +15,14 @@
       "nameCompany": "Google",
       "imageCompany": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png",
       "nit": "90212133"
+    },
+    {
+      "id": "8120",
+      "email": "admin@riwi.i",
+      "password": "123456",
+      "company": "sav",
+      "nit": "9021213",
+      "imgCompany": "asvsav"
     }
   ],
   "jobs": [
