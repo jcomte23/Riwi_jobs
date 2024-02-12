@@ -1,4 +1,4 @@
-import { createJob, deleteJob, getJobsByCompany } from '../components/async_funtions_jobs'
+import { createJob, deleteJob, getJobById, getJobsByCompany, updateJob } from '../components/async_funtions_jobs'
 import '../scss/style.scss'
 import * as bootstrap from 'bootstrap'
 
@@ -11,6 +11,7 @@ const salary = document.getElementById("salary")
 const location = document.getElementById("location")
 const modality = document.getElementById("modality")
 const description = document.getElementById("description")
+let idCache
 
 document.addEventListener('DOMContentLoaded', () => {
     renderJobs()
@@ -28,23 +29,47 @@ formJobs.addEventListener("submit", async (event) => {
         description: description.value,
         companyId: "2034",
     }
-    const jobCreated = await createJob(job)
-    if (jobCreated.ok) {
-        formJobs.reset()
-        btnCloseFormJobs.click()
-        renderJobs()
-        alert("vacante creada")
+    if (idCache === undefined) {
+        const jobCreated = await createJob(job)
+        if (jobCreated.ok) {
+            formJobs.reset()
+            btnCloseFormJobs.click()
+            renderJobs()
+            alert("vacante creada")
+        }
+    } else {
+        const jobUpdated = await updateJob(idCache,job)
+        if (jobUpdated.ok) {
+            formJobs.reset()
+            btnCloseFormJobs.click()
+            renderJobs()
+            alert("vacante actualizada")
+            idCache=undefined
+        }
     }
+
+
 })
 
 tbodyJobs.addEventListener("click", async (event) => {
-    
+
     if (event.target.classList.contains("delete-job")) {
         const id = event.target.getAttribute("data-id")
         const jobDeleted = await deleteJob(id)
         if (jobDeleted.ok) {
             renderJobs()
         }
+    }
+
+    if (event.target.classList.contains("edit-job")) {
+        idCache = event.target.getAttribute("data-id")
+        const jobFound = await getJobById(idCache)
+        titleJob.value = jobFound.data.title
+        experience.value = jobFound.data.experience
+        salary.value = jobFound.data.salary
+        location.value = jobFound.data.location
+        modality.value = jobFound.data.modality
+        description.value = jobFound.data.description
     }
 })
 
@@ -67,7 +92,8 @@ async function renderJobs() {
             <td>${element.modality}</td>
             <td>${element.salary}</td>
             <td>
-                <button class="btn btn-primary edit" data-id="${element.id}">
+                <button class="btn btn-primary edit-job" data-id="${element.id}" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
                     <i class="bi bi-pencil-square"></i>Edit
                 </button>
 
@@ -79,5 +105,7 @@ async function renderJobs() {
         `
     })
 }
+
+
 
 

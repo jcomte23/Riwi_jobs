@@ -17,5 +17,17 @@
       "nit": "90212133"
     }
   ],
-  "jobs": []
+  "jobs": [
+    {
+      "id": "11cf",
+      "title": "conserge",
+      "experience": "4",
+      "publicationDate": 1707749505075,
+      "salary": "500",
+      "location": "Medellin",
+      "modality": "Remote",
+      "description": "vsvs",
+      "companyId": "2034"
+    }
+  ]
 }

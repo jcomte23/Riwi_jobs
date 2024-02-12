@@ -34,6 +34,23 @@ export async function getJobsByCompany(idCompany) {
     }
 }
 
+export async function getJobById(idJob) {
+    const response = await fetch(`${URL}/jobs/${idJob}`)
+    if (response.ok) {
+        const data = await response.json()
+        return {
+            ok: response.ok,
+            data: data,
+            statusText: response.statusText
+        }
+    } else {
+        return {
+            ok: response.ok,
+            statusText: response.statusText
+        }
+    }
+}
+
 export async function createJob(job) {
     const response = await fetch(`${URL}/jobs`, {
         method: "POST",
@@ -54,6 +71,20 @@ export async function deleteJob(idJob) {
         headers: {
             "Content-Type": "application/json"
         }
+    })
+    return {
+        ok: response.ok,
+        statusText: response.statusText
+    }
+}
+
+export async function updateJob(idJob, job) {
+    const response = await fetch(`${URL}/jobs/${idJob}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(job)
     })
     return {
         ok: response.ok,
