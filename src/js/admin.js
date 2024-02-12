@@ -16,16 +16,18 @@ const btnLogout=document.getElementById("btn-logout")
 let session=JSON.parse(localStorage.getItem("userOnline"))
 let idCache
 
+
 document.addEventListener('DOMContentLoaded', () => {
     renderJobs()
 })
 
 formJobs.addEventListener("submit", async (event) => {
     event.preventDefault()
+    const date=new Date()
     const job = {
         title: titleJob.value,
         experience: experience.value,
-        publicationDate: Date.now(),
+        publicationDate: date.toLocaleString(),
         salary: salary.value,
         location: location.value,
         modality: modality.value,
@@ -115,7 +117,3 @@ async function renderJobs() {
         `
     })
 }
-
-
-
-
