@@ -103,8 +103,8 @@ async function renderJobs() {
             <td>${element.experience}</td>
             <td>${element.modality}</td>
             <td>${element.salary}</td>
-            <td>
-                <button class="btn btn-primary edit-job" data-id="${element.id}" data-bs-toggle="modal"
+            <td class="d-flex gap-2">
+                <button class="btn btn-primary edit-job " data-id="${element.id}" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop">
                     <i class="bi bi-pencil-square"></i>Edit
                 </button>
