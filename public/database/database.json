@@ -19,17 +19,6 @@
   ],
   "jobs": [
     {
-      "id": "11cf",
-      "title": "conserge",
-      "experience": "4",
-      "publicationDate": 1707749505075,
-      "salary": "500",
-      "location": "Medellin",
-      "modality": "Remote",
-      "description": "se necesita un conserge",
-      "companyId": "2034"
-    },
-    {
       "id": "6e1c",
       "title": "desarrollador web",
       "experience": "5",
@@ -39,6 +28,17 @@
       "modality": "In person",
       "description": "se necesita un desarrollador web",
       "companyId": "2035"
+    },
+    {
+      "id": "3ae9",
+      "title": "Desarrollador Front-End",
+      "experience": "2",
+      "publicationDate": 1707752546737,
+      "salary": "800000",
+      "location": "Medellin",
+      "modality": "In person",
+      "description": "En estos momentos nos encontramos en búsqueda de un talento para cumplir el rol deDesarrollador Front-end\nExperiencia y conocimientos:más de dos (2) años o superior en: Metodologías ágiles (Scrum/Kanban) Marco SPA (Angular)",
+      "companyId": "2034"
     }
   ]
 }
