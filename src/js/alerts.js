@@ -16,7 +16,7 @@ export function smallAlertSuccess(message) {
     Swal.fire({
         toast: true,
         position: "top-end",
-        icon: "error",
+        icon: "success",
         title: `${message}`,
         showConfirmButton: false,
         timer: 2000,

@@ -1,6 +1,7 @@
 import { createJob, deleteJob, getJobById, getJobsByCompany, updateJob } from '../components/async_funtions_jobs'
 import '../scss/style.scss'
 import * as bootstrap from 'bootstrap'
+import { smallAlertSuccess } from './alerts'
 
 const tbodyJobs = document.getElementById("tbody-jobs")
 const formJobs = document.getElementById("form-jobs")
@@ -37,7 +38,7 @@ formJobs.addEventListener("submit", async (event) => {
             formJobs.reset()
             btnCloseFormJobs.click()
             renderJobs()
-            alert("vacante creada")
+            smallAlertSuccess(jobCreated.statusText)
         }
     } else {
         const jobUpdated = await updateJob(idCache,job)
@@ -45,7 +46,7 @@ formJobs.addEventListener("submit", async (event) => {
             formJobs.reset()
             btnCloseFormJobs.click()
             renderJobs()
-            alert("vacante actualizada")
+            smallAlertSuccess(jobUpdated.statusText)
             idCache=undefined
         }
     }
@@ -59,6 +60,7 @@ tbodyJobs.addEventListener("click", async (event) => {
         const id = event.target.getAttribute("data-id")
         const jobDeleted = await deleteJob(id)
         if (jobDeleted.ok) {
+            smallAlertSuccess(jobDeleted.statusText)
             renderJobs()
         }
     }
